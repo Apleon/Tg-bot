@@ -22,7 +22,13 @@ class Triangle:
     def area(self):
         area = 0.5 * self.side_a * self.height
         print(area)
-    
+
+    def distance(self):
+        return (self.x **2 + self.y **2) **0.5
+
+    def position(self):
+        print("x: ", self.x,"y: ", self.y)
+
     def movement(self,direction,move):
         x_d = self.x
         y_d = self.y
@@ -40,7 +46,7 @@ class Triangle:
         return 0
 
 direction_list = ["UP","DOWN","LEFT","RIGHT"]    
-triangle = Triangle(4, 4, 12)
+triangle = Triangle()
 
 while True:
     question = input('Do you want to enter a move? (YES/NO)\n')
